@@ -6,7 +6,7 @@ const WordEdit = () => {
 
     const router = useRouter();
     const { parent, name } = router.query;
-
+    const [svalue, setSvalue] = useState()
     return (
         <>
 
@@ -17,11 +17,10 @@ const WordEdit = () => {
             </div>
             <div className='container'>
                 <div className="form-inline">
-                    {/* <label htmlFor="search_value">search value:</label>
-          <input type="text" placeholder="Enter search value..." value={svalue} onChange={handleValueChange} />
-          <label htmlFor="search_count">search count:</label>
-          <input type="number" placeholder="Enter search count..." value={scount} onChange={handleCountChange} />
-          <button onClick={handleSubmit}>Search</button> */}
+                    <label htmlFor="edit_word">Edit value:</label>
+                    <input type="text" placeholder="Enter Edit value..." value={svalue} onChange={handleValueChange} />
+
+                    <button onClick={handleSubmit}>Search</button>
                 </div>
 
             </div>

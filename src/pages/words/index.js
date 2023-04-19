@@ -88,12 +88,12 @@ const Words = () => {
         }
         fetchSearchData();
     }
-    // const handleEdit = (parent, name) => {
-    //     router.push(`/word_edit/${parent}/${name}`)
-    // }
-    // const handleAdd = (parent, name) => {
+    const handleEdit = (parent, name) => {
+        router.push(`/word_edit/${parent}/${name}`)
+    }
+    const handleAdd = (parent, name) => {
 
-    // }
+    }
     return (
         <>
             <Header />
@@ -127,8 +127,8 @@ const Words = () => {
                                         <td>no</td>
                                         <td>words name</td>
                                         <td>delete</td>
-                                        {/* <td>edit</td>
-                                        <td>add</td> */}
+                                        <td>edit</td>
+                                        <td>add</td>
 
                                     </tr>
                                 </thead>
@@ -138,8 +138,8 @@ const Words = () => {
                                             <td>{index + 1}</td>
                                             <td key={index} >{val.name}</td>
                                             <td><button className='btn btn-danger' onClick={() => handleDelete(val.parent, val.name)}>delete</button></td>
-                                            {/* <td ><button className='btn btn-warning' onClick={() => handleEdit(val.parent, val.name)}>edit</button></td>
-                                            <td><button className='btn btn-primary' onClick={() => handleAdd(val.parent, val.name)}>add</button></td> */}
+                                            <td ><button className='btn btn-warning' onClick={() => handleEdit(val.parent, val.name)}>edit</button></td>
+                                            <td><button className='btn btn-primary' onClick={() => handleAdd(val.parent, val.name)}>add</button></td>
                                         </tr>
                                     ))}
                                 </tbody>
